@@ -27,55 +27,21 @@ import { FaDocker } from "react-icons/fa";
 
 export const stackData = [
   {
-    title: "Git",
-    img: imgGit,
-  },
-  { title: "Docker", img: FaDocker },
-  {
-    title: "Python",
-    img: imgPython,
-  },
-  {
-    title: "Django",
-    img: imgDjango,
-  },
-  { title: "TypeScript", img: SiTypescript },
-  {
-    title: "JS",
-    img: imgJS,
-  },
-  {
-    title: "HTML",
-    img: imgHTML,
-  },
-  {
-    title: "CSS",
-    img: imgCSS,
-  },
-  {
     title: "React",
     img: imgReact,
   },
   {
-    title: "Node",
-    img: imgNode,
+    title: "JS",
+    img: imgJS,
   },
-  {
-    title: "Bootstrap",
-    img: imgBootstrap,
-  },
+  { title: "TypeScript", img: SiTypescript },
   {
     title: "Redux",
     img: imgRedux,
   },
-
   {
-    title: "Express",
-    img: imgExpress,
-  },
-  {
-    title: "SQL",
-    img: imgSql,
+    title: "Node",
+    img: imgNode,
   },
   {
     title: "PostgreSQL",
@@ -89,6 +55,40 @@ export const stackData = [
     title: "Prisma",
     img: imgPrisma,
   },
+  {
+    title: "Python",
+    img: imgPython,
+  },
+  {
+    title: "Django",
+    img: imgDjango,
+  },
+  { title: "Docker", img: FaDocker },
+  {
+    title: "Git",
+    img: imgGit,
+  },
+  {
+    title: "HTML",
+    img: imgHTML,
+  },
+  {
+    title: "CSS",
+    img: imgCSS,
+  },
+  {
+    title: "Bootstrap",
+    img: imgBootstrap,
+  },
+  {
+    title: "Express",
+    img: imgExpress,
+  },
+  {
+    title: "SQL",
+    img: imgSql,
+  },
+
   {
     title: "JSON Web Token",
     img: imgJwt,

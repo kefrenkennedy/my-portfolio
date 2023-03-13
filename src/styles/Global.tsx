@@ -9,6 +9,7 @@ export const Container = styled("div", {
   maxWidth: "$container",
   margin: "0 auto",
   padding: "0 1rem",
+  backgroundColor:"$grey1",
 });
 
 export const Flex = styled("div", {
@@ -23,7 +24,7 @@ export const colors = {
     },
 
     grey1: {
-      color: "$grey1",
+      color: "$whiteFixed",
     },
 
     grey2: {

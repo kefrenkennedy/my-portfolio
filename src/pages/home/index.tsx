@@ -42,7 +42,7 @@ export const Home = (): JSX.Element => {
               make the world a better place.
             </Text>
             <HeaderButtonsArea>
-              <Button as="a" href="#projetos">
+              <Button type="specific"  as="a" href="#projetos">
                 Projects
               </Button>
               <Button as="a" href="#tecnologias" type="btLink" color="grey5">
@@ -89,11 +89,11 @@ export const Home = (): JSX.Element => {
                 Projects
               </Text>
               <Text as="h3" type="heading2" color="grey1">
-                Originality_and  
+                Originality_and
                 <Text as="span" color="brand1" type="heading2">
-                     _Dedication_   
+                  _Dedication_
                 </Text>
-                  in_every_detail
+                in_every_detail
               </Text>
               <Project />
             </ProjectsAreaContent>

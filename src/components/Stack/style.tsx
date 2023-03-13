@@ -19,6 +19,7 @@ export const StackCard = styled("div", {
   position: "relative",
 
   [`& ${Text}`]: {
+    color: "$grey1",
     opacity: 0,
     position: "absolute",
     transform: "translateY(-15%)",
