@@ -135,8 +135,8 @@ export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
       title2: "1.75rem",
       title3: "1.5rem",
       title4: "0.25rem",
-      text1: "0.75rem",
-      text2: "0.75rem",
+      text1: "1.75rem",
+      text2: "1.2rem",
 
       // Mobile
       title1Mobile: "$title2",

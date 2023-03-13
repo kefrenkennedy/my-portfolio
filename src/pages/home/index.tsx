@@ -3,6 +3,8 @@ import { Container, Flex } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { Button } from "@/styles/Buttons";
 
+import curriculo1 from "../../1.png";
+import curriculo2 from "../../2.png";
 // Components
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
@@ -13,6 +15,8 @@ import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
 
 import { FaGithub } from "react-icons/fa";
+
+import "./index.css";
 
 // Page Style
 import {
@@ -107,6 +111,11 @@ export const Home = (): JSX.Element => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
+      <div id="dv">
+        <img className="c1" src={curriculo1} alt="Minha imagem" />
+        <img className="c1" src={curriculo2} alt="Minha imagem" />
+      </div>
+
       <Contacts />
     </main>
   );
