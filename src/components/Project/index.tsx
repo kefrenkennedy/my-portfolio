@@ -1,5 +1,6 @@
 import {
   Project as ProjectWrapper,
+  ProjectTitle,
   ProjectStack,
   ProjectStackTech,
   ProjectLink,
@@ -16,7 +17,7 @@ interface ReposType {
   name: string;
   language: string;
   description: string;
-  git_url: string;
+  html_url: string;
   homepage: string;
 }
 
@@ -25,62 +26,71 @@ export const Project = (): JSX.Element => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data: Response = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos`
-      )
+      const data = await fetch(
+        `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc`
+      );
 
       const json = await data.json();
 
       setRepositories(json);
 
-      if (!data.ok) {
-        throw data;
-      }
-
       return json;
     };
+
     fetchData();
   }, []);
 
   return (
     <>
-      {repositories?.map((repository) => (
-        <ProjectWrapper key={repository.id}>
-          <Text
-            as="h2"
-            type="heading3"
-            css={{ marginBottom: "$3" }}
-            color="brand1"
-          >
-            {repository.name}
-          </Text>
+      {repositories &&
+        repositories?.map?.((repository) => (
+          <ProjectWrapper key={repository.id}>
+            <ProjectTitle
+              as="h2"
+              type="heading3"
+              css={{ marginBottom: "$3" }}
+              color="grey4"
+            >
+              {repository.name}
+            </ProjectTitle>
 
-          {repository.language && (
             <ProjectStack>
-              <Text type="body2">Language:</Text>
-              <ProjectStackTech>
-                <Text color="brand1" type="body2">
-                  {repository.language}
-                </Text>
-              </ProjectStackTech>
+              <Text type="body2" color="grey2">
+                Primary Language:
+              </Text>
+              {repository.language ? (
+                <ProjectStackTech>
+                  <Text color="grey2" type="body2">
+                    {repository.language}
+                  </Text>
+                </ProjectStackTech>
+              ) : (
+                <ProjectStackTech>
+                  <Text color="grey2" type="body2">
+                    Primary language not identified
+                  </Text>
+                </ProjectStackTech>
+              )}
             </ProjectStack>
-          )}
 
-          <Text type="body1" color="grey2">
-            {repository.description}
-          </Text>
-          <ProjectLinks>
-            <ProjectLink target="_blank" href={repository.git_url}>
-              <FaGithub /> Github Code
-            </ProjectLink>
-            {repository.homepage && (
-              <ProjectLink target="_blank" href={repository.homepage}>
-                <FaShare /> Application
+            <Text type="body1" color="grey2">
+              {repository.description?.substring(0, 129)}
+            </Text>
+            <ProjectLinks>
+              <ProjectLink target="_blank" href={repository.html_url}>
+                <FaGithub /> Github Code
               </ProjectLink>
-            )}
-          </ProjectLinks>
-        </ProjectWrapper>
-      ))}
+              {repository.homepage && (
+                <ProjectLink
+                  target="_blank"
+                  href={`https://${repository.homepage}`}
+                >
+                  <FaShare /> See demo
+                </ProjectLink>
+              )}
+            </ProjectLinks>
+          </ProjectWrapper>
+        ))}
     </>
   );
 };

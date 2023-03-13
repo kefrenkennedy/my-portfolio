@@ -9,12 +9,20 @@ export const Container = styled("div", {
   maxWidth: "$container",
   margin: "0 auto",
   padding: "0 1rem",
-  backgroundColor:"$grey1",
+
+  "@tablet": {
+    maxWidth: "$containerTablet",
+  },
 });
 
 export const Flex = styled("div", {
   display: "flex",
   gap: "$1",
+  alignItems: "center",
+});
+
+export const Box = styled("div", {
+  maxWidth: "100%",
 });
 
 export const colors = {
@@ -22,9 +30,20 @@ export const colors = {
     brand1: {
       color: "$brand1",
     },
-
+    brand2: {
+      color: "$brand2",
+    },
+    brand3: {
+      color: "$brand3",
+    },
+    brand5: {
+      color: "$brand5",
+    },
+    brand7: {
+      color: "$brand5",
+    },
     grey1: {
-      color: "$whiteFixed",
+      color: "$grey1",
     },
 
     grey2: {
@@ -61,32 +80,42 @@ export const globalStyles = globalCss({
   a: { textDecoration: "none" },
 });
 
-export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
+export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
+
   const theme = createTheme({
     colors: {
-      brand1: "#5C63ED",
-      brand2: "#7D82F1",
-      brand3: "#BEC1F8",
-      brand4: "#E7E8FC",
-      grey1: "#212529",
-      grey2: "#495057",
-      grey3: "#CED3D7",
-      grey4: "#F1F3F5",
+      brand1: "#623CEA",
+      brand2: "#311E75",
+
+      grey0: "#0A0A0B",
+      grey1: "#121214",
+      grey2: "#868E96",
+      grey3: "#E9ECEF",
+      grey4: "#F8F9FA",
       grey5: "#F8F9FA",
-      grey6: "#DEE0FB",
+
+      socialInstagram: "#CF50AC",
+      socialFacebook: "#506CCF",
+      socialLinkedin: "#0E76A8",
+
       whiteFixed: "#ffffff",
       mode: "#ffffff",
     },
     sizes: {
       container: "75rem",
+      containerTablet: "40rem",
     },
     space: {
       1: "0.5rem",
       2: "1rem",
       3: "2rem",
+      4: "3rem",
+      5: "4rem",
+      section: "10rem",
+      sectionMobile: "4rem",
     },
     fonts: {
-      titles: '"Lexend", sans-serif;',
+      titles: '"IBM Plex Sans", sans-serif;',
       texts: '"Inter", sans-serif',
     },
     fontSizes: {

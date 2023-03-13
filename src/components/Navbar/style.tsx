@@ -1,10 +1,10 @@
-import { styled } from "../../styles/stitches.config";
-import { Flex, Container } from "../../styles/Global";
-import { Button } from "../../styles/Buttons";
+import { styled } from "@/styles/stitches.config";
+import { Flex, Container } from "@/styles/Global";
+import { Button } from "@/styles/Buttons";
 
 export const Navbar = styled("nav", {
-  background: "$mode",
-  borderBottom: "2px solid $grey4",
+  background: "$grey0",
+  borderBottom: "2px solid $brand1",
   position: "fixed",
   inset: 0,
   bottom: "auto",
@@ -14,6 +14,7 @@ export const Navbar = styled("nav", {
 
   [`& ${Container}`]: {
     display: "flex",
+    position: "relative",
     justifyContent: "space-between",
     "@mobile": {
       flexDirection: "column",
@@ -25,20 +26,10 @@ export const LogoTipo = styled(Flex, {
   alignItems: "center",
 });
 
-export const LogoTipoImage = styled("img", {
-  width: "3rem",
-  height: "3rem",
-  borderRadius: "50%",
-  "@mobile": {
-    width: "2.25rem",
-    height: "2.25rem",
-  },
-});
-
 export const LogoTipoText = styled("span", {
   fontSize: "1.25rem",
   fontWeight: 600,
-  color: "$whiteFixed",
+  color: "$grey4",
   fontFamily: '"IBM Plex Sans"',
   "@mobile": {
     fontSize: "1rem",
@@ -47,16 +38,13 @@ export const LogoTipoText = styled("span", {
 
 export const NavbarLinks = styled(Flex, {
   "@mobile": {
-    flexWrap: "wrap",
-    justifyContent: "space-between",
     marginTop: "$3",
-    [`& ${Button}:nth-child(1)`]: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+    "& a": {
       width: "100%",
-      order: "3",
-    },
-    [`& ${Button}`]: {
-      width: "48%",
-      order: "1",
+      justifyContent: "flex-start",
+      paddingLeft: 0,
     },
   },
 });

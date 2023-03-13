@@ -1,6 +1,6 @@
 {
-  "name": "my-portfolio-v2",
-  "private": false,
+  "name": "kenzie-portfolio-2",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "framer-motion": "^6.4.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",

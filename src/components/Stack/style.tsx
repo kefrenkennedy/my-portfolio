@@ -2,24 +2,20 @@ import { styled } from "../../styles/stitches.config";
 import { keyframes } from "@stitches/react";
 import { Text } from "../../styles/Text";
 
-const scaleUp = keyframes({
+export const scaleUp = keyframes({
   "0%": { transform: "translateY(15%)" },
   "100%": { transform: "translateY(-140%)" },
 });
 
 export const StackCard = styled("div", {
-  minWidth: "10.25rem",
-  maxWidth: "10.25rem",
   borderRadius: "$1",
-  padding: "1rem",
-  background: "$whiteFixed",
+  background: "transparent",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   position: "relative",
 
   [`& ${Text}`]: {
-    color: "$grey1",
     opacity: 0,
     position: "absolute",
     transform: "translateY(-15%)",
@@ -31,6 +27,7 @@ export const StackCard = styled("div", {
     fontSize: "1rem",
     fontWeight: "500",
     whiteSpace: "nowrap",
+    color: "$blackFixed",
 
     "&:before": {
       content: "",
