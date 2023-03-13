@@ -119,10 +119,10 @@ export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
       texts: '"Inter", sans-serif',
     },
     fontSizes: {
-      title1: "2.75rem",
-      title2: "1.75rem",
+      title1: "1.75rem",
+      title2: "1.5rem",
       title3: "1.50rem",
-      title4: "1.25rem",
+      title4: "2rem",
       text1: "1rem",
       text2: "0.875rem",
 
@@ -131,12 +131,12 @@ export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
       title2Mobile: "$title3",
     },
     lineHeights: {
-      title1: "3.8rem",
-      title2: "2.75rem",
-      title3: "2.5rem",
-      title4: "1.25rem",
-      text1: "1.75rem",
-      text2: "1.75rem",
+      title1: "2.8rem",
+      title2: "1.75rem",
+      title3: "1.5rem",
+      title4: "0.25rem",
+      text1: "0.75rem",
+      text2: "0.75rem",
 
       // Mobile
       title1Mobile: "$title2",
